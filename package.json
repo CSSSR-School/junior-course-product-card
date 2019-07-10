@@ -2,12 +2,26 @@
   "name": "product-card",
   "version": "0.1.0",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/CSSSR-School/junior-course-product-card.git"
+    "type": "git",
+    "url": "https://github.com/CSSSR-School/junior-course-product-card.git"
   },
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
-  }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "babel": {
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
+  },
+  "browserslist": "> 0.25%, not dead",
+  "scripts": {
+    "build": "rm -rf lib && babel src --out-dir lib && cp src/*.css lib"
+  },
+  "main": "lib/index.js"
 }
